@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PlayerInformation>
+  <player id="992385" name="Kevin" class="Barbarian" monstersSlain="28" levelReached="6" date="12/30/2019" />
+  <player id="916762" name="oops" class="Witch" monstersSlain="2" levelReached="1" date="12/30/2019" />
+  <player id="112951" name="Shit" class="Witch" monstersSlain="4" levelReached="2" date="12/30/2019" />
+  <player id="367943" name="Dayum" class="Witch" monstersSlain="9" levelReached="3" date="12/30/2019" />
+  <player id="692583" name="Tough Guy" class="Assassin" monstersSlain="32" levelReached="8" date="12/30/2019" />
+  <player id="997565" name="Warsh" class="RoyalGuard" monstersSlain="34" levelReached="8" date="12/31/2019" />
+  <player id="806971" name="Fench" class="Witch" monstersSlain="5" levelReached="2" date="12/31/2019" />
+</PlayerInformation>

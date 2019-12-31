@@ -1,0 +1,478 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
+html, body, form
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.StartPageWrapper 
+{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Images/titelPageBackground.jpg');
+    background-size: 100% 100%;
+    font-family: 'Cinzel', serif;
+}
+
+@keyframes TitleAnimation
+{
+    from {opacity: 0;
+           text-shadow: 0px 0px 0px black;
+    }
+    to {opacity: 1;
+        text-shadow: -8px 8px 10px black;
+        }
+}
+
+@keyframes StartBtnAnimation
+{
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes EnemyTakeDamageAnnimation
+{
+    0% {opacity: 1; position: relative; left: 30px;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 1; position: relative; left: 0px;}
+}
+
+@keyframes PlayerTakeDamageAnnimation
+{
+    0% {opacity: 1; position: relative; right: 30px;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 1; position: relative; right: 0px;}
+}
+
+@keyframes EnemyAttackAnimation
+{
+    from {position: relative; right: 30px;}
+    to {position: relative; right: 0px;}
+}
+
+@keyframes PlayerAttackAnimation
+{
+    from {position: relative; left: 30px;}
+    to {position: relative; left: 0px;}
+}
+
+@keyframes RunAwayAnimation
+{
+    from {position: relative; left: 0px; opacity: 1;}
+    to {position: relative; left: 800px; opacity: 0;}
+}
+
+@keyframes HealAnimation
+{
+    0% {filter: none;}
+    50% {filter: saturate(3);}
+    100% {filter: none;}
+}
+
+@keyframes PlayerZapAnimation
+{
+    from {position: relative; left: 30px; filter: none;}
+    to {position: relative; left: 0px; filter: hue-rotate(180deg);}
+}
+
+@keyframes EnemyZapAnimation
+{
+    from {position: relative; left: 30px; filter: none;}
+    to {position: relative; left: 0px; filter: hue-rotate(180deg);}
+}
+
+@keyframes CantRunAnimation
+{
+    10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.AnimateEnemyTakeDamage
+{
+    animation-name: EnemyTakeDamageAnnimation;
+    animation-duration: 0.75s;
+}
+
+.AnimatePlayerTakeDamage
+{
+    animation-name: PlayerTakeDamageAnnimation;
+    animation-duration: 0.75s;
+}
+
+.AnimatePlayerAttack
+{
+    animation-name: PlayerAttackAnimation;
+    animation-duration: 0.75s;
+}
+
+.AnimateEnemyAttack
+{
+    animation-name: EnemyAttackAnimation;
+    animation-duration: 0.75s
+}
+
+.AnimateRun
+{
+    animation-name: RunAwayAnimation;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;  
+}
+
+.AnimateHeal
+{
+    animation-name: HealAnimation;
+    animation-duration: 1.5s;
+}
+
+.AnimatePlayerZap
+{
+    animation-name: PlayerZapAnimation;
+    animation-duration: 0.75s;
+}
+
+.AnimateEnemyZap
+{
+    animation-name: EnemyZapAnimation;
+    animation-duration: 0.75s;
+}
+
+.AnimateCantRun
+{
+    animation-name: CantRunAnimation;
+    animation-duration: 0.5s;
+}
+
+.GameTitle 
+{
+    padding-bottom: 50px; 
+    font-size: 100px;
+    color: white;
+    text-shadow: -8px 8px 10px black;
+    animation-name: TitleAnimation;
+    animation-duration: 3s;
+}
+
+.StartButton
+{
+    animation-name: StartBtnAnimation;
+    animation-duration: 3s;
+}
+
+.ClassSelection
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: 'Cinzel', serif;
+}
+
+
+.ClassImages
+{
+    height: 500px;
+    width: 500px;
+}
+
+.NoClassImage
+{
+    height: 600px
+}
+
+.KnightImage
+{
+    height: 600px;
+    position: relative;
+    right: 60px;
+}
+
+.PlayerImage
+{
+    height: 600px;
+    width: 500px;
+}
+
+.ClassDescriptions
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+}
+
+.RadLabel
+{
+    font-family: 'Cinzel', serif !important;
+}
+
+.rddlSelect
+{
+    text-align: center !important;
+}
+
+.RadDropDownList
+{
+    text-align: center !important;   
+}
+
+.rddlItem
+{
+    font-family: 'Cinzel', serif !important;
+    text-align: center !important;    
+}
+
+.Buttons
+{
+    margin-top: 25px;
+}
+
+.HeaderWrapper
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.ClassWrapper
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid black;
+}
+
+.NameWrapper
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid black;
+    font-size: 60px;
+}
+
+.XPLVLwrapper
+{
+    display: flex;
+    justify-content:center;
+    margin-bottom:30px; 
+}
+
+.XPwrapper
+{
+    margin-right: 15px;
+    display: flex;    
+}
+
+.LVLwrapper
+{
+    display: flex;
+   
+}
+
+.MonstersSlainWrapper
+{
+    display: flex;
+    margin-right: 15px;
+}
+
+.MainBattleWrapper
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.PlayerWrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PlayerHealthWrapper
+{
+    display: flex;
+}
+
+.PlayerMPwrapper
+{
+    display: flex;
+}
+
+.PlayerAttackWrapper
+{
+    display: flex;
+}
+
+.PlayerMagicWrapper
+{
+    display: flex;
+}
+
+.BattleInterfaceWrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Cinzel', serif;
+    border: 1px solid black;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-image: url(../Images/greyBlue.jpg);
+    border-radius: 10%;
+    box-shadow: 5px 10px 8px 10px #888888;
+    min-width: 450px;
+
+}
+
+.BattleLog
+{
+    //align-self: flex-start;
+    //margin-bottom:auto;
+}
+
+BattleButtonWrapper
+{
+    display: flex;
+}
+
+.EnemyWrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.EnemyHealthWrapper
+{
+    display:flex;
+}
+
+.EnemyAttackWrapper
+{
+    display:flex;
+}
+
+.EnemyImg
+{
+    height: 600px;
+    width: 500px;   
+}
+
+.ContinuewButtonsWrapper
+{
+    display: flex;
+}
+
+.PopUp
+{
+    font-family: 'Cinzel', serif !important;        
+}
+
+.PlayerName
+{
+    display: flex;      
+}
+
+.HighScoreWrapper
+{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('../Images/titelPageBackground.jpg');
+    background-size: 100% 100%;
+    font-family: 'Cinzel', serif;
+}
+
+.EndGameButtons
+{
+    display: flex;
+}
+
+div.RadGrid .rgPager .rgAdvPart    
+{     
+    display:none;        
+}
+
+div.RadGrid .rgPager .rgNumPart    
+{     
+    display:none;        
+}
+
+div.RadGrid .rgPager .rgNumPart    
+{     
+    display:none;        
+} 
+
+div.RadGrid .rgPager .rgPageFirst   
+{     
+    display:none;        
+}
+
+div.RadGrid .rgPager .rgPageLast  
+{     
+    display:none;        
+} 
+
+.HighScoresLabel
+{
+    padding-bottom: 50px; 
+    font-size: 100px;
+    color: white;
+    text-shadow: -8px 8px 10px black;
+}
+
+.ViewPlayerImgWrapper
+{
+    display:flex;
+    justify-content: center;
+}
+
+.BackButtonWrapper
+{
+    display: flex;
+    justify-content: center;
+}
+
+.ViewPlayerWrapper
+{
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.CrownImg
+{
+    height: 70px;
+    width: 90px;
+}
+
